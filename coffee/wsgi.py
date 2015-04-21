@@ -13,10 +13,10 @@ from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "coffee.settings")
 
-from dj_static import Cling
-application = Cling(get_wsgi_application())
+ON_HEROKU = False;
 
-#application = get_wsgi_application()
-
-#web: gunicorn coffee.wsgi --log-file -
-#web: python manage.py runserver 0.0.0.0:8000
+if ON_HEROKU == True:
+	from dj_static import Cling
+	application = Cling(get_wsgi_application())
+else:
+	application = get_wsgi_application()
