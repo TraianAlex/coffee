@@ -13,7 +13,7 @@ from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "coffee.settings")
 
-ON_HEROKU = False;
+ON_HEROKU = True
 
 if ON_HEROKU == True:
 	from dj_static import Cling
