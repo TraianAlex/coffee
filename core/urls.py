@@ -5,5 +5,6 @@ import core.views as coreviews
 urlpatterns = patterns('',
 
 	url(r'^admin/', include(admin.site.urls)),
- 	(r'^$', coreviews.LandingView.as_view()),
+ 	url(r'^$', coreviews.LandingView.as_view()),
+ 	url(r'location/$', coreviews.LocationListView.as_view()),
 )
