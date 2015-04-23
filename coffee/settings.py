@@ -76,8 +76,8 @@ WSGI_APPLICATION = 'coffee.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
-ON_HEROKU = True
-#ON_HEROKU = os.environ.get('ON_HEROKU')
+#ON_HEROKU = True
+ON_HEROKU = os.environ.get('ON_HEROKU')
 
 if ON_HEROKU == True:
     import dj_database_url
