@@ -16,7 +16,7 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "coffee.settings")
 #ON_HEROKU = True
 ON_HEROKU = os.environ.get('ON_HEROKU')
 
-if ON_HEROKU == True:
+if ON_HEROKU == '1':
 	from dj_static import Cling
 	application = Cling(get_wsgi_application())
 else:
