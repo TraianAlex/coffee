@@ -20,6 +20,6 @@ class LocationDetailView(DetailView):
     context_object_name = 'location'
 
 class LocationCreateView(CreateView):
-  	model = coremodels.Location
-  	template_name = 'base/form.html'
-  	fields = "__all__"
+	model = coremodels.Location
+	template_name = 'base/form.html'
+	fields = "__all__"
