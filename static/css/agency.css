@@ -1025,3 +1025,7 @@ h3 a {
 .btn{
     border-radius: 0px;
 }
+
+.main-content{
+    margin-top: 100px;
+}
