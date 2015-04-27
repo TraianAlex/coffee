@@ -77,8 +77,8 @@ WSGI_APPLICATION = 'coffee.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
-ON_HEROKU = True
-#ON_HEROKU = os.environ.get('ON_HEROKU')
+#ON_HEROKU = True
+ON_HEROKU = os.environ.get('ON_HEROKU')
 
 if ON_HEROKU == True:
     import dj_database_url
@@ -133,7 +133,11 @@ STATIC_ROOT ='staticfiles'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 AWS_S3_FORCE_HTTP_URL = True
 AWS_QUERYSTRING_AUTH = False
-AWS_SECRET_ACCESS_KEY = os.environ.get('AWSSecretKey')
-AWS_ACCESS_KEY_ID = os.environ.get('AWSAccessKeyId')
+if ON_HEROKU == True:
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWSSecretKey')
+    AWS_ACCESS_KEY_ID = os.environ.get('AWSAccessKeyId')
+else:
+    AWS_SECRET_ACCESS_KEY = "AKIAI3FO3QNQGHXWIMBA"
+    AWS_ACCESS_KEY_ID = "qfLEMkS1wjbJHbxRRc6wx+OzQXrW5BxhOkqRshwO"
 
 AWS_STORAGE_BUCKET_NAME = 'onemonthcoffee'
