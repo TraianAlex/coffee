@@ -150,7 +150,7 @@ if ON_HEROKU == True:
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWSSecretKey')
     AWS_ACCESS_KEY_ID = os.environ.get('AWSAccessKeyId')
 else:
-    AWS_SECRET_ACCESS_KEY = 'qfLEMkS1wjbJHbxRRc6wx+OzQXrW5BxhOkqRshwO'
-    AWS_ACCESS_KEY_ID = 'AKIAI3FO3QNQGHXWIMBA'
+    AWS_SECRET_ACCESS_KEY = ''
+    AWS_ACCESS_KEY_ID = ''
 
 AWS_STORAGE_BUCKET_NAME = 'onemonthcoffee'
