@@ -18,3 +18,7 @@ psycopg2==2.6
 static==0.4
 wsgiref==0.1.2
 django-toolbelt==0.0.1
+django-bootstrap-pagination==1.5.1
+django-bootstrap3==5.4.0
+django-geoposition==0.2.2
+django-sitegate==0.10.0
