@@ -24,4 +24,3 @@ django-bootstrap3==5.4.0
 django-etc==0.7.0
 django-geoposition==0.2.2
 django-sitegate==0.10.0
-six==1.9.0
